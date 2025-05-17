@@ -5,15 +5,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfólio de Análise de Dados - Riuler</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- IMPORTANTE: Seu kit Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2d9d5c66f.js" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Olá, sou Riuler!</h1>
-  <p>Este é meu portfólio de projetos de análise de dados.</p>
-  
-  <h2>Projetos em Destaque</h2>
-  <ul>
-    <li><a href="https://github.com/riulersilverio/projeto-exemplo">Análise de Vendas com Power BI</a></li>
-    <li><a href="https://github.com/riulersilverio/projeto-exemplo-2">Limpeza de Dados com Python e Pandas</a></li>
-  </ul>
+
+  <header>
+    <div class="header-content">
+      <div class="text-content" data-aos="fade-right" data-aos-duration="1000">
+        <h1>Olá, sou <span class="highlight animated-text">Riuler</span>!</h1>
+        <p class="subtitle">Este é o meu portfólio voltado para análise de dados.</p>
+        <div class="social">
+          <a href="https://github.com/riulersilverio" target="_blank" class="social-link github" title="GitHub">
+            <img src="github-icon.png" alt="Ícone do WhatsApp" class="custom-social-icon">
+            <span class="social-text">GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/riulersilverio" target="_blank" class="social-link linkedin" title="LinkedIn">
+            <img src="linkedin-icon.png" alt="Ícone do WhatsApp" class="custom-social-icon">
+            <span class="social-text">LinkedIn</span>
+          </a>
+          <a href="https://wa.me/5541996889624" target="_blank" class="social-link whatsapp image-icon-link" title="WhatsApp">
+            <img src="whatsapp-icon.png" alt="Ícone do WhatsApp" class="custom-social-icon">
+            <span class="social-text">WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <img class="foto" src="foto-perfil.jpg" alt="Foto de Riuler" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200"/>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="powerbi-section" data-aos="fade-up">
+      <h2 data-aos="zoom-in">📊 Projetos Power BI (Interativos)</h2>
+      <div class="tabs-container">
+        <div class="tab-buttons">
+          <button class="tab-button active" onclick="showDashboard(event, 'dashboard1')">Relatório SAC</button>
+          <button class="tab-button" onclick="showDashboard(event, 'dashboard2')">DRE</button>
+          <button class="tab-button" onclick="showDashboard(event, 'dashboard3')">Projetos</button>
+          <button class="tab-button" onclick="showDashboard(event, 'dashboard4')">Datadriven - Brasileirão</button>
+        </div>
+
+        <div id="dashboard1" class="tab-content active">
+          <iframe title="Dashboard Relatório SAC" width="100%" height="540"
+            src="https://app.powerbi.com/view?r=eyJrIjoiYTY3YmVjNDQtNjA2Ni00NmM2LWE2YWYtY2MwMDRhMWNlOGVhIiwidCI6Ijk1MzkzNWQ5LWYxNjMtNGQ3Yi04MjAwLTZhMGJhYmQwODcwZSJ9"
+            frameborder="0" allowfullscreen="true"></iframe>
+        </div>
+        <div id="dashboard2" class="tab-content">
+          <iframe title="Dashboard Análise DRE" width="100%" height="540"
+            src="https://app.powerbi.com/view?r=eyJrIjoiZjQ0MGRkNmUtOThlZi00ODk0LWEyNDgtNzY5ZDYxYzcxNWFmIiwidCI6Ijk1MzkzNWQ5LWYxNjMtNGQ3Yi04MjAwLTZhMGJhYmQwODcwZSJ9"
+            frameborder="0" allowfullscreen="true"></iframe>
+        </div>
+        <div id="dashboard3" class="tab-content">
+          <iframe title="Dashboard Projetos" width="100%" height="540"
+            src="https://app.powerbi.com/view?r=eyJrIjoiYzYzNTYwY2ItMWVlNi00NmNmLTljMTUtNzYwNWJmYzQyODA2IiwidCI6Ijk1MzkzNWQ5LWYxNjMtNGQ3Yi04MjAwLTZhMGJhYmQwODcwZSJ9"
+            frameborder="0" allowfullscreen="true"></iframe>
+        </div>
+                <div id="dashboard4" class="tab-content">
+          <iframe title="Dashboard Datadriven Brasileirão" width="100%" height="540"
+            src="https://app.powerbi.com/view?r=eyJrIjoiODEzNTk0ZGUtY2Q5YS00MTc5LTljODAtYTc3ZTJlYjcwNzk2IiwidCI6Ijk1MzkzNWQ5LWYxNjMtNGQ3Yi04MjAwLTZhMGJhYmQwODcwZSJ9"
+            frameborder="0" allowfullscreen="true"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="other-projects-section" data-aos="fade-up">
+      <h2 data-aos="zoom-in" data-aos-delay="100">🔗 Outros Projetos</h2>
+      <div class="project-cards-container">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon-top"><i class="fas fa-chart-line"></i></div>
+          <h3>Índice Imobiliário</h3>
+          <p>Aplicação interativa em Streamlit para análise de mercado imobiliário.</p>
+          <a href="https://indiceimobiliario-2etobdqnsqynxegefguappf.streamlit.app/" target="_blank" class="card-link">
+            Ver Projeto <i class="fas fa-external-link-alt link-icon"></i>
+          </a>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon-top"><i class="fab fa-google"></i></div>
+          <h3>Dashboard Looker Studio</h3>
+          <p>Visualização de dados de performance de campanhas no Looker Studio.</p>
+          <a href="https://lookerstudio.google.com/reporting/abcdef12-3456-7890-abcd-1234567890ef" target="_blank" class="card-link">
+            Ver Projeto <i class="fas fa-external-link-alt link-icon"></i>
+          </a>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon-top"><i class="fas fa-code-branch"></i></div>
+          <h3>Análise de Vendas</h3>
+          <p>Repositório GitHub com análise exploratória de dados de vendas (Python, Pandas).</p>
+          <a href="https://github.com/riulersilverio/projeto-exemplo" target="_blank" class="card-link">
+            Ver no GitHub <i class="fab fa-github link-icon"></i>
+          </a>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-icon-top"><i class="fas fa-broom"></i></div>
+          <h3>Limpeza de Dados</h3>
+          <p>Projeto focado em técnicas de limpeza e preparação de dados (Python).</p>
+          <a href="https://github.com/riulersilverio/projeto-exemplo-2" target="_blank" class="card-link">
+            Ver no GitHub <i class="fab fa-github link-icon"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="curriculum-section" data-aos="fade-up">
+      <h2 data-aos="zoom-in">📄 Currículo</h2>
+      <p>Interessado em saber mais sobre minha trajetória profissional e acadêmica?</p>
+      <a class="button" href="curriculo-riuler.pdf" download>
+        <i class="fas fa-download icon-button"></i> Baixar Currículo
+      </a>
+    </section>
+  </div>
+
+  <footer>
+    <p>© <span id="currentYear"></span> Riuler Silvério. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script> {/* Seu script para Tabs, AOS init, ano, etc. */}
 </body>
 </html>
